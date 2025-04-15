@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comlink Demo</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#4285f4">
+</head>
+<body>
+  <header>
+    <h1>Comlink Demo</h1>
+    <p>A demonstration of the Comlink messaging system</p>
+  </header>
+  
+  <main>
+    <div class="container">
+      <div class="app-container">
+        <div class="app" id="app1">
+          <h2>App 1</h2>
+          <div class="app-content">
+            <div class="message-input">
+              <input type="text" id="app1-message" placeholder="Type a message...">
+              <button id="app1-send">Send</button>
+            </div>
+            <div class="message-log" id="app1-log"></div>
+          </div>
+        </div>
+        
+        <div class="app" id="app2">
+          <h2>App 2</h2>
+          <div class="app-content">
+            <div class="message-input">
+              <input type="text" id="app2-message" placeholder="Type a message...">
+              <button id="app2-send">Send</button>
+            </div>
+            <div class="message-log" id="app2-log"></div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="controls">
+        <h2>Trust Controls</h2>
+        <div class="trust-controls">
+          <div class="trust-level">
+            <label for="trust-level">Trust Level:</label>
+            <select id="trust-level">
+              <option value="owned">Owned</option>
+              <option value="trusted">Trusted</option>
+              <option value="untrusted" selected>Untrusted</option>
+            </select>
+          </div>
+          <button id="set-trust">Set Trust Level</button>
+        </div>
+        
+        <h2>Message Log</h2>
+        <div class="system-log" id="system-log"></div>
+      </div>
+    </div>
+  </main>
+  
+  <footer>
+    <p>&copy; 2023 Comlink Team</p>
+  </footer>
+  
+  <script type="module" src="app.js"></script>
+</body>
+</html>

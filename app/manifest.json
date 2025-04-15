@@ -1,0 +1,48 @@
+{
+  "name": "Comlink Demo",
+  "short_name": "Comlink",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4285f4",
+  "icons": [
+    {
+      "src": "icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "webax": {
+    "version": "0.1.0",
+    "publisher": "webax.net",
+    "package_id": "comlink-demo",
+    "dependencies": {
+      "webax-lib": "^0.1.0",
+      "comlink": "^0.1.0"
+    },
+    "permissions": [
+      "storage",
+      "network"
+    ],
+    "distribution": {
+      "webtorrent": "magnet:?xt=urn:btih:example",
+      "archive": "https://webax.net/comlink-demo.zip",
+      "repo": "https://github.com/webax/comlink-demo.git"
+    },
+    "comlink": {
+      "expose": [
+        "api.sendMessage",
+        "api.receiveMessage"
+      ],
+      "connect": [
+        "app://example.com/app1",
+        "app://example.com/app2"
+      ]
+    }
+  }
+}
